@@ -1,0 +1,77 @@
+EventPulse Demo Script
+
+Duration : 2 minutes
+
+1) Introduce EventPulse
+
+EventPulse is an AI-powered event-driven traffic forecasting and resource optimization system developed for Gridlock Hackathon 2.0.
+
+
+2) Show Prediction
+
+Event Type:
+VIP Movement
+
+Hour:
+21
+
+Day:
+Friday
+
+Click Predict
+
+
+Outputs:
+
+Impact Level : Critical
+
+Police Needed : 34
+
+Barricades : 16
+
+Diversion Required : Yes
+
+
+
+3) Scroll Down
+
+Show
+
+Analytics Dashboard
+
+Peak Hour Heatmap
+
+Police Requirement Chart
+
+
+
+4) Show Bengaluru Event Hotspot Map
+
+
+
+5) Show Learning Insights
+
+
+
+6) Show Mitigation Effectiveness
+
+
+
+7) Deployment
+
+Frontend
+
+https://eventpulse-gridlock-nfsuqwmfsc8nshpqvnu5mk.streamlit.app/
+
+
+Backend
+
+https://eventpulse-gridlock.onrender.com/
+
+
+Swagger
+
+https://eventpulse-gridlock.onrender.com/docs
+
+
+Thank you.

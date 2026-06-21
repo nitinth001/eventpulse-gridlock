@@ -1,0 +1,33 @@
+EventPulse - Traffic Intelligence Engine
+
+Version : 1.0
+
+Prediction Approach:
+Rule-Based Decision Engine
+
+Modules:
+
+• Risk Score Computation
+• Impact Level Classification
+• Police Recommendation
+• Barricade Recommendation
+• Diversion Planning
+• Mitigation Simulator
+• Post Event Learning
+
+Training:
+No supervised training performed.
+
+Dataset:
+ASTraM Bengaluru Event Dataset
+
+Total Events:
+8173
+
+Event Categories:
+16
+
+Deployment:
+Frontend : Streamlit
+Backend : FastAPI
+Hosting : Streamlit Cloud + Render

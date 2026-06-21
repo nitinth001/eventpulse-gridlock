@@ -1,0 +1,28 @@
+Input Event
+ ↓
+
+Risk Score Calculation
+ ↓
+
+Impact Score Generation
+ ↓
+
+Impact Level Classification
+ ↓
+
+Police Allocation
+ ↓
+
+Barricade Recommendation
+ ↓
+
+Diversion Planning
+ ↓
+
+Mitigation Simulation
+ ↓
+
+Learning Insights
+ ↓
+
+Dashboard Visualization

@@ -5,6 +5,8 @@ import plotly.express as px
 import folium
 from streamlit_folium import st_folium
 from utils import predict_event_plan
+from fpdf import FPDF
+from io import BytesIO
 
 
 st.set_page_config(
@@ -56,6 +58,19 @@ df = load_data()
 st.title("🚦 EventPulse")
 st.subheader("AI Powered Event Driven Traffic Forecasting")
 st.write("Predict congestion and recommend manpower deployment")
+st.divider()
+
+total_events = len(df)
+total_categories = df["event_cause"].str.lower().nunique()
+avg_police = round(df["recommended_police"].mean(), 2)
+critical_percent = round((df["impact_level"].eq("Critical").mean()) * 100, 2)
+
+kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+
+kpi1.metric("Total Events", total_events)
+kpi2.metric("Event Categories", total_categories)
+kpi3.metric("Avg Police Needed", avg_police)
+kpi4.metric("Critical Events", f"{critical_percent}%")
 
 st.sidebar.title("🚦 EventPulse")
 
@@ -200,6 +215,39 @@ if predict:
     file_name="eventpulse_report.txt",
 
     mime="text/plain"
+
+    )
+    class PDF(FPDF):
+
+     def header(self):
+
+        self.set_font("Arial","B",16)
+
+        self.cell(0,10,"EventPulse Traffic Action Report",ln=True,align="C")
+
+
+    pdf=PDF()
+
+    pdf.add_page()
+
+    pdf.set_font("Arial",size=12)
+
+
+    pdf.multi_cell(0,8,report_text)
+
+
+    pdf_bytes=bytes(pdf.output(dest="S"))
+
+
+    st.download_button(
+
+     "📄 Download PDF Report",
+
+     data=pdf_bytes,
+
+     file_name="eventpulse_report.pdf",
+
+     mime="application/pdf"
 
     )
 
@@ -359,7 +407,31 @@ fig4 = px.imshow(
 )
 
 st.plotly_chart(fig4, use_container_width=True)
+st.subheader("📈 Event Timeline Across the Day")
 
+timeline = (
+    df.groupby("hour")
+    .size()
+    .reset_index(name="event_count")
+)
+
+fig_timeline = px.line(
+    timeline,
+    x="hour",
+    y="event_count",
+    markers=True,
+    title="Traffic Events Throughout the Day"
+)
+
+fig_timeline.update_layout(
+    xaxis_title="Hour",
+    yaxis_title="Number of Events"
+)
+
+st.plotly_chart(
+    fig_timeline,
+    use_container_width=True
+)
 st.divider()
 st.header("🔁 Post-Event Learning Insights")
 
@@ -422,5 +494,43 @@ fig = px.bar(
 
 st.plotly_chart(
     fig,
+    use_container_width=True
+)
+st.divider()
+st.header("🚨 Simulated Live Incident Feed")
+
+feed_df = df[
+    [
+        "event_cause",
+        "hour",
+        "day_of_week",
+        "impact_level",
+        "recommended_police",
+        "recommended_barricades",
+        "requires_road_closure"
+    ]
+].sample(
+    n=min(10, len(df)),
+    random_state=None
+)
+
+feed_df = feed_df.rename(
+    columns={
+        "event_cause": "Event Cause",
+        "hour": "Hour",
+        "day_of_week": "Day",
+        "impact_level": "Impact Level",
+        "recommended_police": "Police Needed",
+        "recommended_barricades": "Barricades",
+        "requires_road_closure": "Road Closure Required"
+    }
+)
+
+st.write(
+    "A simulated operational feed showing recent event alerts and recommended response actions."
+)
+
+st.dataframe(
+    feed_df,
     use_container_width=True
 )

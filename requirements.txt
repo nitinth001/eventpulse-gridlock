@@ -1,10 +1,10 @@
-
-fastapi
-uvicorn
+streamlit
 pandas
 numpy
-scikit-learn
-streamlit
 plotly
 folium
 streamlit-folium
+fastapi
+uvicorn
+scikit-learn
+fpdf

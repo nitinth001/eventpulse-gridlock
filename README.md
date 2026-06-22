@@ -463,7 +463,9 @@ http://localhost:8501
 
 ### Nitin Thakur
 
-Mathematics and Computing
+NIT HAMIRPUR
+
+BRANCH : Mathematics and Computing
 
 Gridlock Hackathon 2.0 Submission
 

@@ -1,133 +1,119 @@
-#  EventPulse
-### AI Powered Event-Driven Traffic Forecasting and Resource Optimization System
+# 🚦 EventPulse
 
+### AI-Powered Event-Driven Traffic Forecasting & Resource Optimization
 
+**Version:** v1.2 (Gridlock Hackathon 2.0 Final Submission)
+
+---
 
 # 📌 Problem Statement
 
-Urban events such as political rallies, VIP movements, protests, construction activities, and public gatherings frequently cause localized traffic disruptions.
+Urban events such as political rallies, VIP movements, protests, construction activities, public gatherings, accidents, and waterlogging frequently cause localized traffic disruptions.
 
-Current traffic management systems rely heavily on manual planning and experience-driven decisions.
+Current traffic management systems rely heavily on manual planning and experience-driven decisions, making it difficult to estimate event impact, optimize resource deployment, and learn from previous incidents.
 
-EventPulse aims to provide an AI-assisted decision support system capable of:
+EventPulse is an AI-assisted traffic intelligence platform designed to:
 
-✔ Forecasting traffic impact
+✔ Forecast traffic impact
 
-✔ Recommending optimal police deployment
+✔ Recommend optimal police deployment
 
-✔ Suggesting barricade allocation
+✔ Suggest barricade allocation
 
-✔ Generating diversion plans
+✔ Generate diversion plans
 
-✔ Simulating mitigation effectiveness
+✔ Simulate mitigation effectiveness
 
-✔ Learning from historical events
+✔ Learn from historical events
 
+✔ Provide operational awareness through live incident monitoring
 
 ---
 
 # 🌐 Live Deployment
 
-### Frontend Dashboard
+## Frontend Dashboard
 
 https://eventpulse-gridlock-nfsuqwmfsc8nshpqvnu5mk.streamlit.app/
 
+---
 
-### Backend API
+## Backend API
 
 https://eventpulse-gridlock.onrender.com/
 
+---
 
-### Swagger Documentation
+## Swagger Documentation
 
-https://eventpulse-gridlock.onrender.com/docs
-
+https://eventpulse-gridlock.onrender.com/docs/
 
 ---
 
 # 📊 Dataset Overview
 
-Dataset Source
+### Dataset Source
 
 ASTraM Bengaluru Event Dataset
 
+### Dataset Statistics
 
-Dataset Statistics
+• Total Events : **8173**
 
+• Event Categories : **16**
 
-• Total Events : 8173
+• Geographic Coverage : **Bengaluru**
 
-• Event Categories : 16
+• Temporal Coverage : **Multiple Years**
 
-• Geographic Coverage : Bengaluru
+---
 
-• Temporal Coverage : Multiple years
+### Major Event Categories
 
-
-Major Event Categories
-
-
-Vehicle Breakdown
-
-Construction
-
-Accident
-
-VIP Movement
-
-Public Event
-
-Water Logging
-
-Procession
-
-Tree Fall
-
-Protest
-
-Road Conditions
-
-Congestion
-
-Pot Holes
-
-
+* Vehicle Breakdown
+* Construction
+* Accident
+* VIP Movement
+* Public Event
+* Water Logging
+* Procession
+* Tree Fall
+* Protest
+* Road Conditions
+* Congestion
+* Pot Holes
 
 ---
 
 # 🔍 Exploratory Data Analysis
 
-Insights extracted from historical event records
-
+EventPulse performs extensive historical event analysis to identify traffic patterns and congestion trends.
 
 ### Peak Hour Analysis
 
-Identified time periods with maximum event frequency
+Identifies time periods with maximum event frequency.
 
+---
 
 ### Road Closure Probabilities
 
+VIP Movement → **80%**
 
-VIP Movement → 80%
+Public Event → **46%**
 
-Public Event → 46%
+Construction → **26%**
 
-Construction → 26%
+Procession → **26%**
 
-Procession → 26%
+---
 
+### Day-wise Analysis
 
+• Pot holes peak on Saturdays
 
-### Day Wise Analysis
+• Accidents peak on Tuesdays
 
-
-Pot holes peak on Saturdays
-
-Accidents peak on Tuesdays
-
-Construction remains consistent across weekdays
-
-
+• Construction remains consistent across weekdays
 
 ---
 
@@ -135,54 +121,43 @@ Construction remains consistent across weekdays
 
 Traffic risk is estimated using a rule-based scoring mechanism.
 
+### Factors Considered
 
-Factors considered
+* Event Severity
+* Peak Hour Indicator
+* Road Closure Requirement
+* Historical Frequency
+* Day Impact
 
+---
 
-Event Severity
+### Risk Categories
 
-Peak Hour Indicator
+• Low
 
-Road Closure Requirement
+• Medium
 
-Historical Frequency
+• High
 
-Day Impact
-
-
-Risk Categories
-
-
-Low
-
-Medium
-
-High
-
-Critical
-
+• Critical
 
 ---
 
 # 🚓 Resource Allocation Engine
 
+EventPulse dynamically recommends resources based on estimated event impact.
 
-EventPulse recommends resources dynamically.
+### Outputs
 
+✔ Recommended Police Personnel
 
-Outputs
+✔ Recommended Barricades
 
+✔ Traffic Diversion Requirement
 
-Recommended Police Personnel
+---
 
-Recommended Barricades
-
-Traffic Diversion Requirement
-
-
-
-Examples
-
+### Examples
 
 VIP Movement
 
@@ -190,6 +165,7 @@ VIP Movement
 
 16 barricades
 
+---
 
 Public Event
 
@@ -197,6 +173,7 @@ Public Event
 
 12 barricades
 
+---
 
 Tree Fall
 
@@ -204,6 +181,7 @@ Tree Fall
 
 10 barricades
 
+---
 
 Vehicle Breakdown
 
@@ -211,199 +189,168 @@ Vehicle Breakdown
 
 2 barricades
 
-
-
 ---
 
 # 🛣 Diversion Planning
 
-
 Alternative routes are suggested for high impact events.
 
+### Examples
 
-Examples
-
-
-Outer Ring Road
-
-
-Hebbal Flyover
-
-
-Airport Service Road
-
-
-NICE Road
-
-
-ORR Service Road
-
-
+* Outer Ring Road
+* Hebbal Flyover
+* Airport Service Road
+* NICE Road
+* ORR Service Road
 
 ---
 
 # 📉 Mitigation Simulator
 
-
 Measures expected congestion reduction after interventions.
 
-
-Metrics
-
+### Metrics
 
 Impact Score
 
-
 Post Mitigation Score
-
 
 Mitigation Potential
 
+---
 
-Examples
-
+### Examples
 
 VIP Movement
 
 50% reduction
 
+---
 
 Tree Fall
 
 55% reduction
 
+---
 
 Public Event
 
 43% reduction
 
+---
 
+# 📚 Post-Event Learning Insights
+
+A learning module identifies event categories that benefit most from proactive interventions.
+
+### Metrics
+
+✔ Average Impact Score
+
+✔ Average Police Requirement
+
+✔ Average Barricades
+
+✔ Learning Gap
 
 ---
 
-# 📚 Learning Insights
-
-
-A post-event learning module identifies event categories that benefit most from proactive planning.
-
-
-Metrics
-
-
-Average Impact Score
-
-
-Average Police Requirement
-
-
-Average Barricades
-
-
-Learning Gap
-
-
-
-Observation
-
+### Observation
 
 VIP Movement exhibits the highest mitigation opportunity.
-
-
 
 ---
 
 # 🗺 Interactive Dashboard
 
-
-Dashboard Features
-
+### Dashboard Features
 
 ✔ Event Prediction
 
+✔ Police & Barricade Recommendations
 
-✔ Resource Recommendations
-
-
-✔ Diversion Plans
-
+✔ Diversion Route Planning
 
 ✔ Peak Hour Heatmaps
 
+✔ Bengaluru Event Hotspot Mapping
 
-✔ Event Hotspot Maps
+✔ Event Timeline Across the Day
 
+✔ Post-Event Learning Insights
 
-✔ Learning Insights
+✔ Mitigation Effectiveness Simulator
 
-
-✔ Mitigation Effectiveness Analysis
-
+✔ Simulated Live Incident Feed
 
 ✔ Downloadable Action Reports
 
+✔ Interactive Analytics Dashboard
 
+---
+
+# 📈 Prototype Highlights
+
+✔ 8173 Traffic Events Processed
+
+✔ 16 Event Categories
+
+✔ 34 Maximum Police Personnel Recommended
+
+✔ 16 Maximum Barricades Suggested
+
+✔ 50% Congestion Reduction Simulated
+
+✔ Fully Deployed Cloud Prototype
+
+✔ Interactive Operational Dashboard
 
 ---
 
 # ⚙ Technology Stack
 
+## Frontend
 
-Frontend
+* Streamlit
+* Plotly
+* Folium
 
+---
 
-Streamlit
+## Backend
 
+* FastAPI
+* Uvicorn
 
-Plotly
+---
 
+## Data Processing
 
-Folium
+* Pandas
+* NumPy
 
+---
 
+## Testing
 
-Backend
+* Pytest
 
+---
 
-FastAPI
+## Deployment
 
-
-Uvicorn
-
-
-
-Data Processing
-
-
-Pandas
-
-
-NumPy
-
-
-Scikit-Learn
-
-
-
-Deployment
-
-
-Render
-
-
-Streamlit Community Cloud
-
-
+* Render
+* Streamlit Community Cloud
 
 ---
 
 # 🏗 System Architecture
 
-
-Dataset
+Dataset (ASTraM)
 
 ↓
 
-EDA
+Exploratory Data Analysis
 
 ↓
 
@@ -411,7 +358,7 @@ Feature Engineering
 
 ↓
 
-Risk Engine
+Risk Scoring Engine
 
 ↓
 
@@ -419,7 +366,7 @@ Impact Estimation
 
 ↓
 
-Resource Allocation
+Resource Allocation Engine
 
 ↓
 
@@ -431,7 +378,7 @@ Mitigation Simulator
 
 ↓
 
-Learning Module
+Post Event Learning Module
 
 ↓
 
@@ -439,98 +386,111 @@ FastAPI Backend
 
 ↓
 
-Streamlit Dashboard
+Streamlit Interactive Dashboard
 
+↓
 
+Cloud Deployment
 
 ---
 
+# ⚙ Local Setup
 
-
-#  Local Setup:
-
-
-Clone Repository
-
+### Clone Repository
 
 ```bash
 git clone https://github.com/nitinth001/eventpulse-gridlock.git
+cd eventpulse-gridlock
 ```
 
-
-Install Dependencies
-
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-
-Run Frontend
-
-
-```bash
-streamlit run api/app.py
-```
-
-
-Run Backend
-
+### Start FastAPI Backend
 
 ```bash
 uvicorn api.main:app --reload
 ```
 
+Backend URL
+
+```text
+http://localhost:8000
+```
+
+Swagger Docs
+
+```text
+http://localhost:8000/docs
+```
+
+---
+
+### Start Streamlit Frontend
+
+```bash
+streamlit run api/app.py
+```
+
+Frontend URL
+
+```text
+http://localhost:8501
+```
 
 ---
 
 # 🔮 Future Improvements
 
+* Real-time CCTV Integration
 
-Real-time CCTV Integration
+* Weather Forecast Integration
 
+* Google Maps API Integration
 
-Weather Forecast Integration
+* Adaptive Signal Timing
 
+* Reinforcement Learning Based Diversion Optimization
 
-Google Maps API
-
-
-Adaptive Signal Timing
-
-
-Reinforcement Learning Based Diversion Optimization
-
-
-Emergency Vehicle Routing
-
-
+* Emergency Vehicle Routing
 
 ---
 
 # 👨‍💻 Author
 
-## Nitin Thakur
+### Nitin Thakur
 
 Mathematics and Computing
 
 Gridlock Hackathon 2.0 Submission
 
-
 ---
 
-### Overall Project Status
+# ✅ Project Status
 
-✅ End-to-End Prototype Built
+✔ End-to-End Prototype Built
 
-✅ Frontend Deployed
+✔ Streamlit Dashboard Deployed
 
-✅ Backend Deployed
+✔ FastAPI Backend Deployed
 
-✅ Interactive Dashboard
+✔ Risk Scoring Engine
 
-✅ Resource Recommendation Engine
+✔ Resource Allocation Engine
 
-✅ Event Learning Module
+✔ Diversion Planning Module
 
-✅ Submission Ready
+✔ Mitigation Simulator
+
+✔ Learning Insights Module
+
+✔ Simulated Incident Feed
+
+✔ Downloadable Reports
+
+✔ Interactive Visual Analytics
+
+✔ Submission Ready

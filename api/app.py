@@ -206,17 +206,7 @@ if predict:
 """
 
 
-    st.download_button(
-
-    label="📥 Download Action Report",
-
-    data=report_text,
-
-    file_name="eventpulse_report.txt",
-
-    mime="text/plain"
-
-    )
+    
     st.download_button(
     label="📥 Download Action Report",
     data=report_text,

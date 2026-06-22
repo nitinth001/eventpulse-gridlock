@@ -217,39 +217,12 @@ if predict:
     mime="text/plain"
 
     )
-    class PDF(FPDF):
-
-     def header(self):
-
-        self.set_font("Arial","B",16)
-
-        self.cell(0,10,"EventPulse Traffic Action Report",ln=True,align="C")
-
-
-    pdf=PDF()
-
-    pdf.add_page()
-
-    pdf.set_font("Arial",size=12)
-
-
-    pdf.multi_cell(0,8,report_text)
-
-
-    pdf_bytes=bytes(pdf.output(dest="S"))
-
-
     st.download_button(
-
-     "📄 Download PDF Report",
-
-     data=pdf_bytes,
-
-     file_name="eventpulse_report.pdf",
-
-     mime="application/pdf"
-
-    )
+    label="📥 Download Action Report",
+    data=report_text,
+    file_name="eventpulse_report.txt",
+    mime="text/plain"
+   )
 
 st.divider()
 st.header("📊 Analytics Dashboard")

@@ -7,4 +7,3 @@ streamlit-folium
 fastapi
 uvicorn
 scikit-learn
-fpdf

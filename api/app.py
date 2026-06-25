@@ -5,7 +5,7 @@ import plotly.express as px
 import folium
 from streamlit_folium import st_folium
 from utils import predict_event_plan
-from fpdf import FPDF
+
 from io import BytesIO
 
 
